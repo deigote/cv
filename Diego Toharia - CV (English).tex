@@ -1,0 +1,121 @@
+%% start of file `template_en.tex'.
+%% Copyright 2007 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,pdftex]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths                             % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Diego}
+\familyname{Toharia Rabasco}
+\title{Curriculum Vitae}
+\degree{Computer and software engineer} % optional, remove the line if not wanted
+\address{Address: C/ Monasterio de Caaveiro 14}{28049, Madrid, Spain} % optional, remove the line if not wanted
+\mobile{Mobile phone: (+34) 677534723}                    % optional, remove the line if not wanted
+\phone{Phone: (+34) 912242114}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{Email: diego@toharia.com}                      % optional, remove the line if not wanted
+\extrainfo{\Mundus~Website: \httplink[http://diego.toharia.com]{http://diego.toharia.com} (fresh CV available at tab CV)}
+\dateofbirth{Date of birth: 21th June, 1982} % optional, remove the line if not wanted
+\photo[85pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\textheight=740pt
+\topmargin=-6.5em
+\begin{document}
+\maketitle
+
+\closesection{}                   % needed to renewcommands
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+%\subsection{Master thesis}
+%\cvline{title}{\emph{Transmem. A software transactional memory system}}
+%\cvline{supervisors}{Ricardo Jimenez-Peris}
+%\cvline{deadline}{Expected for January 2008}
+%\cvline{description}{\small A software transactional memory system developed in Java language that provides snapshot isolation and brings the transactional model to general purpose programming}
+
+\section{Experience}
+% Gesfor
+\cventry{February 2008 - Current}{Software analyst and programmer at Germinus (Web 2.0 consultancy department) }{Grupo Gesfor}{Madrid}{}{}               % arguments 3 to 6 are optional
+\cvlistitem{Development manager (participating in the requirements analysis, and in charge of desing and architecture decisions, and the codification with a small developer team under my supervision), in several projects for customers like RBI Spain (Reed Business, a multinational publishing house) or Carrefour Spain, the most relevant ones being \emph{Enterprises directory} (a powerful enterprises and products search engine) and \emph{RBI Replicas} (a publising-oriented group of web portals running with the same Liferay core, focused on SEO improvements)}
+\cvlistitem{Analyst programmer in Educamadrid and Educarex projects, educative and collaborative portals based in Liferay for the regional governments of Madrid and Extremadura}
+% LSD
+\cventry{June 2006 - December 2007}{Research grant (full-time)}{Distributed Systems Laboratory at Universidad Politécnica de Madrid (http://lsd.ls.fi.upm.es/lsd)}{Madrid}{}{}               % arguments 3 to 6 are optional
+\cvlistitem{Development of a virtual databases system for Business Intelligence in J2EE environments for Telefónica Soluciones (O2), using SOAP web services}
+\cvlistitem{Research and development of a software transactional memory system}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description}                % arguments 3 to 6 are optional
+%\subsection{Miscellaneous}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}% arguments 3 to 6 are optional
+
+\section{Education}
+\cventry{2000-2006}{Master in Computer Science Engineering}{Facultad de Informática, Universidad Politécnica de Madrid}{Madrid}{}{}  % arguments 3 to 6 are optional
+\cventry{2007-current}{Postgraduate Master in Information Technologies, specialization in Distributed Systems}{Facultad de Informática, Universidad Politécnica de Madrid}{Madrid}{}{}% arguments 3 to 6 are optional
+
+\section{Languages}
+\cvlanguage{Spanish}{Native}{}
+\cvlanguage{English}{High level}{monthly stays abroad in the Sprachcaffe idiom school}
+
+%\closesection{}
+%\clearpage
+
+\section{Technical skills and competences}
+\cvline{Technologies}{\listitemsymbol{} J2EE (Struts, Spring, Tiles, JSP 2.0, JSTL and Expression Language, Hibernate, JDBC, LDAP, JCR, Lucene, XML, XSL, JUnit, Ant)}
+\cvlistitem{Wide experience with Liferay (as developer, consultant, and advanced user)}
+\cvlistitem{Experience with other web development technologies (Ruby on Rails, Grails or PHP) }
+\cvlistitem{Knowledge of SOAP and REST Web Services}
+\cvlistitem{Wide experience with web client technologies such as XHTML, CSS and Javascript}
+
+\cvline{Project managment}{\listitemsymbol{} Good skills at project analysis and development (design patterns, refactoring, OOP, inheritance, architecture, etcetera) and experience with UML}
+\cvlistitem{Experience with Extreme Programming, SCRUM and its related agile techniques}
+\cvlistitem{Experience with project managment tools such as distributed version control systems (SVN and CVS), tracking and documentation tools (Trac, MediaWiki), etcetera}
+\cvlistitem{Used to work with development environments like Microsoft Visual Studio or Eclipse}
+
+\cvline{Other}{\listitemsymbol{} Unix (GNU Linux) wide experience (as administrator and advanced user) }
+\cvlistitem{High level in Java and C. Experience with many other languajes}
+\cvlistitem{Wide experience with communications (sockets, RMI, Mobile Agents, web services)}
+\cvlistitem{Experience with offimatic suites such as \LaTeX,  or Microsoft Office}
+
+
+%\closesection{}
+%\clearpage
+
+\section{Personal skills}
+\cvlistitem{Experience in consulting, familiar with direct contact with the customer and his needs}
+\cvlistitem{Good skills in project analysis from a technology point of view}
+\cvlistitem{Easiness to become familiar with new technologies and paradigms}
+\cvlistitem{Experience and interested both in real market and in research projects}
+\cvlistitem{Used to team working and project planning}
+
+\section{Miscellaneous}
+\cvline{Sports}{13 years of highly competitive swimming with 6 National Championships participations. Currently practices Competitive Lifesaving}
+\cvline{Open source}{Open source regular user and minor contributor}
+\cvline{Lifesaving}{First aid / lifesaving technician}
+
+%\section{Referees}
+%\cvline{Ricardo Jiménez-Peris}{Distributed Systems Laboratory codirector and Master Thesis Supervisor (http://lsd.ls.fi.upm.es/lsd/Members/rjimenez)}
+%\cvline{Marta Patiño}{Distributed Systems Laboratory codirector (http://lsd.ls.fi.upm.es/lsd/Members/mpatino)}
+% Publications from a BibTeX file
+%\nocite{*}
+%\bibliographystyle{plain}
+%\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+\end{document}
