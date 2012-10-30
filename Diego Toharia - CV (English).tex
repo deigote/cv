@@ -24,9 +24,9 @@
 \familyname{Toharia Rabasco}
 \title{Curriculum Vitae}
 \degree{Computer and software engineer} % optional, remove the line if not wanted
-\address{Address: C/ Monasterio de Caaveiro 14}{28049, Madrid, Spain} % optional, remove the line if not wanted
+\address{Location: 28034, Madrid, Spain}{} % optional, remove the line if not wanted
 \mobile{Mobile phone: (+34) 677534723}                    % optional, remove the line if not wanted
-\phone{Phone: (+34) 912242114}                      % optional, remove the line if not wanted
+% \phone{Phone: (+34) 912242114}                      % optional, remove the line if not wanted
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
 \email{Email: diego@toharia.com}                      % optional, remove the line if not wanted
 \extrainfo{\Mundus~Website: \httplink[http://diego.toharia.com]{http://diego.toharia.com} (fresh CV available at tab CV)}
@@ -47,68 +47,88 @@
 \closesection{}                   % needed to renewcommands
 \renewcommand{\listitemsymbol}{-} % change the symbol for lists
 
-%\subsection{Master thesis}
-%\cvline{title}{\emph{Transmem. A software transactional memory system}}
-%\cvline{supervisors}{Ricardo Jimenez-Peris}
-%\cvline{deadline}{Expected for January 2008}
-%\cvline{description}{\small A software transactional memory system developed in Java language that provides snapshot isolation and brings the transactional model to general purpose programming}
+\section{About me}
+\vskip -1em
+\begin{minipage}[t]{1.20\maincolumnwidth} \setlength{\parskip}{0.2cm}
+I am a \textbf{software engineer} interested in distributed systems and web technologies
+(specially backend, but also frontend). I am highly experienced in \textbf{web development}, 
+particularly with \textbf{J2EE} and \textbf{Grails}. I am also skilled in iOS development.
+
+I've successfully participated in several projects as \textbf{chief architect} and \textbf{scrum 
+master}, focusing on the analysis, design and development. I love \textbf{programming} and 
+\textbf{architecture designing}, and I am interested in agile management techniques.
+
+I also enjoy \textbf{Linux} system administration, and lately I have been participating in some 
+projects as the \textbf{sysadmin}, using \textbf{Amazon AWS} (EC2, EBS, S3, Cloudformation) for the 
+hosting, and \textbf{Puppet} for deployment automation.
+\end{minipage}
 
 \section{Experience}
+% OSOCO
+\cventry{Oct 09 - Current}{Software engineer}{OSOCO}{Madrid}{}{}               % arguments 3 to 6 are optional
+\cvlistitem{My main task is \textbf{software developing} (i.e architecture designing and programming), 
+mostly using Groovy and Grails, but also Java/J2EE (Spring MVC, Hibernate, JSTL), web technologies 
+(such as Javascript or CSS) and iOS/Objective-C.}
+\cvlistitem{I also play the \textbf{scrum master} role in some projects, being in charge of managing 
+the team and the project, as well as leading the technical and architectural aspects. I also mentor 
+and train new team members.}
+\cvlistitem{Finally, I am one of the company's \textbf{sysadmin}, where I have the chance of putting 
+in good use my passion for Unix by creating and maintaining both OSOCO and our clients infrastructure 
+(using Linux, Amazon AWS and Puppet). }
 % Gesfor
-\cventry{February 2008 - Current}{Software analyst and programmer at Germinus (Web 2.0 consultancy department) }{Grupo Gesfor}{Madrid}{}{}               % arguments 3 to 6 are optional
-\cvlistitem{Development manager (participating in the requirements analysis, and in charge of desing and architecture decisions, and the codification with a small developer team under my supervision), in several projects for customers like RBI Spain (Reed Business, a multinational publishing house) or Carrefour Spain, the most relevant ones being \emph{Enterprises directory} (a powerful enterprises and products search engine) and \emph{RBI Replicas} (a publising-oriented group of web portals running with the same Liferay core, focused on SEO improvements)}
-\cvlistitem{Analyst programmer in Educamadrid and Educarex projects, educative and collaborative portals based in Liferay for the regional governments of Madrid and Extremadura}
+\cventry{Feb 08 - Oct 09}{Software analyst and programmer at Germinus (Web 2.0 consultancy department) }
+{Grupo Gesfor}{Madrid}{}{}               % arguments 3 to 6 are optional
+\cvlistitem{\textbf{Project leader and developer} (participating in the requirements analysis, in 
+charge of desing and architecture decisions, and also part of a small developer team under my 
+supervision) in several projects using J2EE (Struts, Spring, Hibernate, JSTL, Lucene), Liferay and 
+web technologies (Javscript and CSS).}
 % LSD
-\cventry{June 2006 - December 2007}{Research grant (full-time)}{Distributed Systems Laboratory at Universidad Politécnica de Madrid (http://lsd.ls.fi.upm.es/lsd)}{Madrid}{}{}               % arguments 3 to 6 are optional
-\cvlistitem{Development of a virtual databases system for Business Intelligence in J2EE environments for Telefónica Soluciones (O2), using SOAP web services}
-\cvlistitem{Research and development of a software transactional memory system}
+\cventry{Jun 06 - Dec 07}{Research grant (full-time)}{Distributed Systems Laboratory at Universidad Politécnica de Madrid (http://lsd.ls.fi.upm.es/lsd)}{Madrid}{}{}               % arguments 3 to 6 are optional
+\cvlistitem{Development of a virtual databases system for Business Intelligence in J2EE environments for Telefónica Soluciones (O2), using SOAP web services.}
+\cvlistitem{Research and development of a software transactional memory system.}
 %\cventry{year--year}{Job title}{Employer}{City}{}{Description}                % arguments 3 to 6 are optional
 %\subsection{Miscellaneous}
 %\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}% arguments 3 to 6 are optional
 
 \section{Education}
-\cventry{2000-2006}{Master in Computer Science Engineering}{Facultad de Informática, Universidad Politécnica de Madrid}{Madrid}{}{}  % arguments 3 to 6 are optional
+\cventry{2000-2006}{Computer Science Engineering degree (5 courses)}{Facultad de Informática, Universidad Politécnica de Madrid}{Madrid}{}{}  % arguments 3 to 6 are optional
 \cventry{2007-current}{Postgraduate Master in Information Technologies, specialization in Distributed Systems}{Facultad de Informática, Universidad Politécnica de Madrid}{Madrid}{}{}% arguments 3 to 6 are optional
 
 \section{Languages}
 \cvlanguage{Spanish}{Native}{}
-\cvlanguage{English}{High level}{monthly stays abroad in the Sprachcaffe idiom school}
+\cvlanguage{English}{Professional working proficiency}{}
 
 %\closesection{}
 %\clearpage
 
 \section{Technical skills and competences}
-\cvline{Technologies}{\listitemsymbol{} J2EE (Struts, Spring, Tiles, JSP 2.0, JSTL and Expression Language, Hibernate, JDBC, LDAP, JCR, Lucene, XML, XSL, JUnit, Ant)}
-\cvlistitem{Wide experience with Liferay (as developer, consultant, and advanced user)}
-\cvlistitem{Experience with other web development technologies (Ruby on Rails, Grails or PHP) }
-\cvlistitem{Knowledge of SOAP and REST Web Services}
-\cvlistitem{Wide experience with web client technologies such as XHTML, CSS and Javascript}
+\cvline{Technologies}{\listitemsymbol{} Experience as project \textbf{chief architect}, greatly skilled in 
+software analysis, design and development (design patterns, refactoring, OOP, inheritance, 
+architecture, etcetera).}
+\cvlistitem{Wide experience in web development, specially with \textbf{Groovy and
+Grails}, but also with \textbf{J2EE} (Struts, Spring, Tiles, JSP 2.0, JSTL and Expression Language, Hibernate, Lucene, XML, JUnit).}
+\cvlistitem{Good knowledge with \textbf{web development} frontend technologies (XHTML, Javascript, CSS, Ajax, jQuery).}
+\cvlistitem{Real experience using \textbf{Amazon AWS} (Cloudformation, EC2) and \textbf{Puppet} for 
+building and manage complex cloud based architectures.}
+\cvlistitem{Wide experience with \textbf{Linux}, both as an advanced user and as a sysadmin. Skilled
+in creating and maintaining administration shell scripts.}
 
-\cvline{Project managment}{\listitemsymbol{} Good skills at project analysis and development (design patterns, refactoring, OOP, inheritance, architecture, etcetera) and experience with UML}
-\cvlistitem{Experience with Extreme Programming, SCRUM and its related agile techniques}
-\cvlistitem{Experience with project managment tools such as distributed version control systems (SVN and CVS), tracking and documentation tools (Trac, MediaWiki), etcetera}
-\cvlistitem{Used to work with development environments like Microsoft Visual Studio or Eclipse}
-
-\cvline{Other}{\listitemsymbol{} Unix (GNU Linux) wide experience (as administrator and advanced user) }
-\cvlistitem{High level in Java and C. Experience with many other languajes}
-\cvlistitem{Wide experience with communications (sockets, RMI, Mobile Agents, web services)}
-\cvlistitem{Experience with offimatic suites such as \LaTeX,  or Microsoft Office}
-
+\cvline{Managment}{\listitemsymbol{} Experience managing small teams as \textbf{scrum master}, and used to \textbf{mentor} and train junior team members.}
+\cvlistitem{Used to work in an \textbf{agile} environment using good practices (TDD, continuous integration) and open source tools such as distributed version control systems (Git, SVN), tracking and documentation tools (Trac, Jenkins, Artifactory, MediaWiki, etcetera).}
 
 %\closesection{}
 %\clearpage
+%\section{Personal skills}
+%\cvlistitem{Experience in consulting, familiar with direct contact with the customer and his needs}
+%\cvlistitem{Good skills in project analysis from a technology point of view}
+%\cvlistitem{Easiness to become familiar with new technologies and paradigms}
+%\cvlistitem{Experience and interested both in real market and in research projects}
+%\cvlistitem{Used to team working and project planning}
 
-\section{Personal skills}
-\cvlistitem{Experience in consulting, familiar with direct contact with the customer and his needs}
-\cvlistitem{Good skills in project analysis from a technology point of view}
-\cvlistitem{Easiness to become familiar with new technologies and paradigms}
-\cvlistitem{Experience and interested both in real market and in research projects}
-\cvlistitem{Used to team working and project planning}
-
-\section{Miscellaneous}
-\cvline{Sports}{13 years of highly competitive swimming with 6 National Championships participations. Currently practices Competitive Lifesaving}
-\cvline{Open source}{Open source regular user and minor contributor}
-\cvline{Lifesaving}{First aid / lifesaving technician}
+%\section{Miscellaneous}
+%\cvline{Sports}{13 years of highly competitive swimming with 6 National Championships participations}
+%\cvline{Open source}{Open source regular user and minor contributor}
+%\cvline{Lifesaving}{First aid / lifesaving technician}
 
 %\section{Referees}
 %\cvline{Ricardo Jiménez-Peris}{Distributed Systems Laboratory codirector and Master Thesis Supervisor (http://lsd.ls.fi.upm.es/lsd/Members/rjimenez)}

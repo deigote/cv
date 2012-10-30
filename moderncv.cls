@@ -379,7 +379,13 @@
 
 % usage (inside 'language' cvsection environment): \cvlanguage{name}{level}{comment}
 \newcommand*{\cvlanguage}[3]{%
-  \cvline{#1}{\begin{minipage}[t]{.170\maincolumnwidth}\textbf{#2}\end{minipage}\hfill\begin{minipage}[t]{0.830\maincolumnwidth}\raggedright\footnotesize\itshape #3\end{minipage}}}
+  \cvline{#1}
+  {\begin{minipage}[t]{.580\maincolumnwidth}
+  \textbf{#2}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.930\maincolumnwidth}
+  \raggedright\footnotesize\itshape #3\end{minipage}}}
 
 % usage (inside 'computer skills' cvsection environment): \cvcomputer{category}{programs}{category}{programs}
 \newcommand*{\cvcomputer}[4]{%
