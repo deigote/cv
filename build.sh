@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git remote update
-if [[ `git status -uno | grep "# Your branch is behind"` ]] ; then 
+if [[ `git status -uno | grep "Your branch is behind"` ]] ; then 
         echo "We are behind, building a new release..."
         git pull origin master
         curl -X PURGE http://deigote.com/cv &> /dev/null
