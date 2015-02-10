@@ -1,4 +1,0 @@
-sudo apt-get install texlive-latex-base texlive-latex-extra texlive-latex-extra-doc subversion
-pdflatex Diego\ Toharia\ -\ CV\ \(Spanish\).tex 
-pdflatex Diego\ Toharia\ -\ CV\ \(English\).tex 
-./build.sh
