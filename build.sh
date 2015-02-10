@@ -3,10 +3,12 @@
 cd $(dirname $0)
 
 OUTPUT_DIR="$(pwd)/out/"
-if [ -d "$1" ] ; then
+if [ ! -z "$1" ] ; then
 	OUTPUT_DIR="$1"
+	mkdir -p $OUTPUT_DIR
 fi
 OUTPUT_FILE=Diego\ Toharia\ -\ CV\ \(English\).pdf
+echo "$OUTPUT_DIR/$OUTPUT_FILE"
 
 git remote update
 if [[ ! -f "$OUTPUT_DIR/$OUTPUT_FILE" || `git status -uno | grep "Your branch is behind"` ]] ; then 
