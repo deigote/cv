@@ -1,4 +1,4 @@
-FROM dockerfile/ubuntu
+FROM ubuntu:14.04.1
 
 RUN \
 	apt-get update && \
