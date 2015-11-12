@@ -1,0 +1,17 @@
+sudo: required
+dist: trusty
+before_install:
+- docker pull blang/latex
+script:
+- mkdir out
+- docker run --rm -i --net=none -v $PWD:/data blang/latex pdflatex -interaction=nonstopmode
+  --output-directory=./out Diego\ Toharia\ -\ CV\ \(English\).tex
+- chown -R $USER:$USER ./out
+- find ./out -type f ! -name '*.pdf' -delete
+deploy:
+  provider: releases
+  api_key:
+    secure: E1II4CWMiwB3OrX3sjAsb1ePue4flG3pXcgMulQNAQd1csRA74pGqc67hWVTNJZ9kZjZHA0U2sctSUtep9B0C5LTpOHHXBUbnNtXXZwmHCFvaKJJuy+docvs8/f+H5B0pSoT8H5ydvs3gCuC+FJ1pv//L34J9gPRmam54wsyVMM=
+  file: ./out/Diego\ Toharia\ -\ CV\ \(English\).pdf
+  on:
+    repo: deigote/cv
