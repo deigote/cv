@@ -14,3 +14,4 @@ deploy:
   file: ./out/Diego\ Toharia\ -\ CV\ \(English\).pdf
   on:
     repo: deigote/cv
+    tags: true
