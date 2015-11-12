@@ -6,7 +6,6 @@ script:
 - mkdir out
 - docker run --rm -i --net=none -v $PWD:/data blang/latex pdflatex -interaction=nonstopmode
   --output-directory=./out Diego\ Toharia\ -\ CV\ \(English\).tex
-- chown -R $USER:$USER ./out
 - find ./out -type f ! -name '*.pdf' -delete
 deploy:
   provider: releases
