@@ -1,0 +1,124 @@
+%% start of file `template_en.tex'.
+%% Copyright 2007 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,pdftex]{moderncv}
+
+% moderncv themes
+%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+\moderncvtheme[blue]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\recomputelengths                             % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Carolina}
+\familyname{Del Campo Domínguez}
+\title{Curriculum Vitae}
+\degree{Profesor de natación y monitor deportivo} % optional, remove the line if not wanted
+\address{Ubicación: 81547 Munich, Alemania}{} % optional, remove the line if not wanted
+\mobile{Teléfono: +34 647456978 / +49 160 99842601}                    % optional, remove the line if not wanted
+% \phone{Phone: (+34) 912242114}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{Email: melpomene18@gmail.com}                      % optional, remove the line if not wanted
+%\extrainfo{\Mundus~Website: \httplink[http://diego.toharia.com]{http://diego.toharia.com}}
+%\dateofbirth{Date of birth: 21th June, 1982} % optional, remove the line if not wanted
+\photo[85pt]{picture-carol}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\textheight=740pt
+\topmargin=-6.5em
+\begin{document}
+\maketitle
+
+\closesection{}                   % needed to renewcommands
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\section{Acerca de mí}
+\vskip -1em
+\begin{minipage}[t]{1.20\maincolumnwidth} \setlength{\parskip}{0.2cm}
+
+Soy \textbf{profesor de natación} y monitor deportivo, y tengo 9 años de experiencia en el ámbito deportivo,
+como profesora de natación, \textbf{actividades acuaticas} colectivas y \textbf{psicomotricidad}.
+He trabajado con alumnos de todas las edades, y tengo amplia experiencia en \textbf{matronatación}.
+
+\end{minipage}
+
+\section{Experiencia laboral}
+
+% Real Canoe
+\cventry{2009 - 2014}{Coordinador deportivo}{Real Canoe N.C}{Madrid}{}{}               % arguments 3 to 6 are optional
+\cvlistitem{Coordinador de la escuela deportiva de adultos y clases acuáticas colectivas.}
+\cvlistitem{Seguimiento y atención del alumnado, gestión de los grupos, control de altas o bajas, sugerencias.}
+\cvlistitem{Control y seguimiento del profesorado.}
+
+\cventry{2004 - 2014}{Profesor de natación}{Real Canoe N.C}{Madrid}{}{}               % arguments 3 to 6 are optional
+\cvlistitem{Enseñanza de natación y dominio del medio acuático a niños de 2 a 14 años.}
+
+\cventry{2007 - 2014}{Socorrista acuático}{Real Canoe N.C}{Madrid}{}{}               % arguments 3 to 6 are optional
+\cvlistitem{Prevencion de riesgos y salvamento.}
+
+% FEMADI
+\cventry{2004 - 2008}{Monitor de discapacitados}{Federación Madrileña de Discapacitados (FEMADI)}{Madrid}{}{}
+\cvlistitem{Monitor de natación y psicomotricidad}
+\cvlistitem{Mejora de la psicomotricidad y el dominio del medio acuático a niños y adolescentes con discapacidades
+derivadas de un daño cerebral, autismo, sindrome de down u alteraciones psiquicas.}
+
+% Decathlon
+\cventry{2006 - 2008}{Vendedor Deportivo}{Decathlon España}{Madrid}{}{}
+\cvlistitem{Vendedor / Asesor Nutricional}
+\cvlistitem{Venta y asesoramiento de productos de nutrición y elementos de outdoor o entrenamiento (gps, walkies, brujulas, pulsómetros...)}
+\cvlistitem{Gestión de pedidos, albaranes, inventario, \textit{facing} del lineal}
+
+% Holmes
+\cventry{2003 - 2004}{Monitor de \textit{Aqua-Gym}}{Holmes Place}{Madrid}{}{}
+\cvlistitem{Instructor de clases colectivas}
+\cvlistitem{Clases de gimnasia acuática a grupos mixtos de 10 a 15 personas.}
+
+\cventry{2003 - 2004}{Monitor de \textit{Aqua-Baby}}{Holmes Place}{Madrid}{}{}
+\cvlistitem{Monitor de Matronatación}
+\cvlistitem{Clases de adaptación al medio a bebés con acompañamiento de los padres como parte de la enseñanza.}
+
+\cventry{2003 - 2004}{Socorrista Acuático}{Holmes Place}{Madrid}{}{}
+
+% Colegio Mirasol
+\cventry{2002 - 2003}{Monitor de Natación}{Colegio Mirasol}{Madrid}{}{}
+\cvlistitem{Monitor extraescolar}
+\cvlistitem{Enseñanza de natación a niños de 3 a 6 años.}
+
+% Jardi di Asa
+\cventry{2002 - 2003}{Socorrista / Monitor}{Jardi di Asa}{Madrid}{}{}
+
+\section{Formación académica}
+\cventry{2005-2007}{Tecnico en Conducción de Actividades Deportivas en el Medio Natural, especialización en senderísmo y conducción de grupos a caballo y en bicicleta}
+{Ciudad Escolar}{Madrid}{}{}  % arguments 3 to 6 are optional
+\cventry{2003-2005}{Tecnico de Actividades Fisico Deportivas}{Ciudad Escolar}{Madrid}{}{}  % arguments 3 to 6 are optional
+\cventry{2001-2003}{Bachillerato}{Instituto Publico Herrera Oria}{Madrid}{}{}% arguments 3 to 6 are optional
+
+\section{Formación complementaria}
+\cventry{2007}{Seminario de Deporte con Discapacitados}{Federación Madrileña de Discapacitados}{Madrid}{}{}
+\cventry{2003}{Entrenador Nacional de Fisioculturismo y Musculación}{Escuela Nacional de Fitness y Musculación.}{Madrid}{}{}
+\cventry{2002}{Monitor de natación}{Federación Española de Salvamento y Socorrismo}{Madrid}{}{}
+\cventry{2002}{Socorrista Acuatico y Primeros Auxilios}{Federación Española de Salvamento y Socorrismo}{Madrid}{}{}
+
+\section{Idiomas}
+\cvlanguage{Español}{Nativo}{}
+\cvlanguage{Inglés}{Nivel medio (B1)}{}
+\cvlanguage{Alemán}{Nivel bajo (A2)}{}
+
+\section{Experiencia deportiva}
+\cvline{Real Canoe}{Nadadora del equipo del Real Canoe durante 10 temporadas. Varias veces Campeona de España Junior en 100 y 200 metros espalda.}
+\cvline{Selección española}{Internacional Junior en 2 ocasiones con la selección española de natación}
+
+\end{document}
