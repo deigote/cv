@@ -76,7 +76,7 @@
       \addressfont\color{color2}%
       \if@left\begin{tabular}[b]{@{}r@{}}\fi%
       \if@right\begin{tabular}[b]{@{}l@{}}\fi%
-        \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
+        \ifthenelse{\isundefined{\@addressstreet}}{}{\addresssymbol\@addressstreet%
           \ifthenelse{\equal{\@addresscity}{}}{}{\makenewline\@addresscity}% if \addresstreet is defined, \addresscity and addresscountry will always be defined but could be empty
           \ifthenelse{\equal{\@addresscountry}{}}{}{\makenewline\@addresscountry}}%
         \phonesdetails% needs to be pre-rendered as loops and tabulars seem to conflict
