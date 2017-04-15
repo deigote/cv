@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 cd $(dirname $0)
 
 IFS=$'\n'
@@ -16,6 +18,7 @@ if [[ ${SHOULD_BUILD} -eq 1 ]]; then
 	git pull origin master
 	docker build -t cv-updater .
 	docker run -it --rm -v "$(pwd)":/cv-src -w /cv-out cv-updater bash -c "\
+		set -e; \
 		cp /cv-src/*.tex . && \
 		cp /cv-src/*.png . && \
 		cp /cv-src/lib/* . && \
