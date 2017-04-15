@@ -5,28 +5,25 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[11pt,a4paper,pdftex]{moderncv}
+\documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
-%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[blue]{classic}                % idem
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+\moderncvhead[\moderncvstyleheadoptions]{1}
 
 % character encoding
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
-
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
-\recomputelengths                             % required when changes are made to page layout lengths
+\usepackage[scale=0.85,tmargin=10mm,bmargin=10mm]{geometry}
+\setlength{\hintscolumnwidth}{2.8cm}           % si desea cambiar el ando de la columna para las fechas
 
 % personal data
-\firstname{Carolina}
-\familyname{Del Campo Domínguez}
+\name{Carolina}{Del Campo Domínguez}
 \title{Curriculum Vitae}
 \degree{Profesor de natación y monitor deportivo} % optional, remove the line if not wanted
-\address{Ubicación: 81547 Munich, Alemania}{} % optional, remove the line if not wanted
-\mobile{Teléfono: +34 647456978 / +49 160 99842601}                    % optional, remove the line if not wanted
-% \phone{Phone: (+34) 912242114}                      % optional, remove the line if not wanted
-%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\address{81547 Munich, Alemania}{} % optional, remove the line if not wanted
+\phone[mobile]{+34 647456978 / +49 160 99842601}                    % optional, remove the line if not wanted
 \email{Email: melpomene18@gmail.com}                      % optional, remove the line if not wanted
 %\extrainfo{\Mundus~Website: \httplink[http://diego.toharia.com]{http://diego.toharia.com}}
 %\dateofbirth{Date of birth: 21th June, 1982} % optional, remove the line if not wanted
@@ -37,8 +34,6 @@
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
-\textheight=740pt
-\topmargin=-6.5em
 \begin{document}
 \maketitle
 
@@ -46,14 +41,10 @@
 \renewcommand{\listitemsymbol}{-} % change the symbol for lists
 
 \section{Acerca de mí}
-\vskip -1em
-\begin{minipage}[t]{1.20\maincolumnwidth} \setlength{\parskip}{0.2cm}
 
 Soy \textbf{profesor de natación} y monitor deportivo, y tengo 9 años de experiencia en el ámbito deportivo,
 como profesora de natación, \textbf{actividades acuaticas} colectivas y \textbf{psicomotricidad}.
 He trabajado con alumnos de todas las edades, y tengo amplia experiencia en \textbf{matronatación}.
-
-\end{minipage}
 
 \section{Experiencia laboral}
 

@@ -5,53 +5,46 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[11pt,a4paper,pdftex]{moderncv}
+\documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
-%\moderncvtheme[blue]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-\moderncvtheme[blue]{classic}                % idem
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+\moderncvhead[\moderncvstyleheadoptions]{1}
 
 % character encoding
 \usepackage[utf8]{inputenc}                   % replace by the encoding you are using
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
-\recomputelengths                             % required when changes are made to page layout lengths
+\usepackage[scale=0.85,tmargin=10mm,bmargin=10mm]{geometry}
+\setlength{\hintscolumnwidth}{2.8cm}           % si desea cambiar el ando de la columna para las fechas
 
 % personal data
-\firstname{Diego}
-\familyname{Toharia Rabasco}
+\name{Diego}{Toharia}
 \title{Curriculum Vitae}
-\degree{Computer and software engineer} % optional, remove the line if not wanted
-\address{Location: 80687 Munich, Germany}{} % optional, remove the line if not wanted
-\mobile{Mobile phone: (+34) 677534723 / (+49) 0151 26103161}                    % optional, remove the line if not wanted
+%\degree{Computer and software engineer} % optional, remove the line if not wanted
+\address{81547 Munich, Germany}{} % optional, remove the line if not wanted
+\phone[mobile]{+34 677534723 / +49 0151 26103161}                    % optional, remove the line if not wanted
 % \phone{Phone: (+34) 912242114}                      % optional, remove the line if not wanted
 %\fax{fax (optional)}                          % optional, remove the line if not wanted
 \email{Email: diego@toharia.com}                      % optional, remove the line if not wanted
-\extrainfo{\Mundus~Website: \httplink[http://diego.toharia.com]{http://diego.toharia.com}}
+\homepage{http://diego.toharia.com}
 %\dateofbirth{Date of birth: 21th June, 1982} % optional, remove the line if not wanted
 \photo[85pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
 %\quote{Some quote (optional)}                 % optional, remove the line if not wanted
-
-%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
 
 %----------------------------------------------------------------------------------
 %            content
 %----------------------------------------------------------------------------------
-\textheight=740pt
-\topmargin=-6.5em
 \begin{document}
+\renewcommand{\listitemsymbol}{-~}% change the symbol for lists
 \maketitle
 
-\closesection{}                   % needed to renewcommands
-\renewcommand{\listitemsymbol}{-} % change the symbol for lists
-
 \section{About me}
-\vskip -1em
-\begin{minipage}[t]{1.20\maincolumnwidth} \setlength{\parskip}{0.2cm}
 
 I am a \textbf{software engineer} interested in distributed systems and web technologies
-(specially backend, but also frontend). I am highly experienced in \textbf{web development}, 
+(specially backend, but also frontend). I am highly experienced in \textbf{web development},
 particularly with \textbf{Grails} and \textbf{J2EE}.
 
 I am also some iOS development knowledge, having participated in some small iPhone projects as the
@@ -59,33 +52,52 @@ main developer. I have also been the \textbf{chief architect} and \textbf{scrum 
 web applications, focusing on the analysis, design and development. I love \textbf{programming} and
 \textbf{architecture designing}, and I am interested in agile management techniques.
 
-I also enjoy \textbf{Linux} system administration, and lately I have been participating in some 
+I also enjoy \textbf{Linux} system administration, and lately I have been participating in some
 projects as part of the \textbf{devops} team, using \textbf{Amazon AWS} (EC2, EBS, S3, Cloudformation)
 for the hosting, and \textbf{Docker} and \textbf{Puppet} for deployment automation.
-\end{minipage}
 
 \section{Experience}
-% tado
-\cventry{Feb 13 - Current}{Software engineer}{tadoº GmbH}{Munich}{}{}               % arguments 3 to 6 are optional
+
+% AS24
+\cventry{Jan 17 - Now}{Lead software engineer}{AutoScout24 GmbH}{Munich}{}{}               % arguments 3 to 6 are optional
+\cventry{Jan 16 - Dec 16}{Senior software engineer}{AutoScout24 GmbH}{Munich}{}{}               % arguments 3 to 6 are optional
 \cvlistitem{I was part of the small team (4-5 people) of multi-disciplinar developers
-that take care, as a team, of all the \textbf{backend} software and \textbf{infrastructure} 
-that power up tado's hardware devices and mobile apps, as well as the web-app and 
+that take care, as a team, of all the \textbf{backend} software and \textbf{infrastructure}
+that power up tado's hardware devices and mobile apps, as well as the web-app and
 backoffice \textbf{frontend apps} and other internal tools.}
-\cvlistitem{Our duties included supporting server-device communication using binary protocols 
-over \textbf{CoaP and websockets}, providing \textbf{REST APIs} for our mobile apps, front-end 
-apps and partners, developing our \textbf{AngularJS web apps} for both customers and support 
-agents and providing a scalable, \textbf{cloud-based architecture} for hosting our different 
+\cvlistitem{Our duties included supporting server-device communication using binary protocols
+over \textbf{CoaP and websockets}, providing \textbf{REST APIs} for our mobile apps, front-end
+apps and partners, developing our \textbf{AngularJS web apps} for both customers and support
+agents and providing a scalable, \textbf{cloud-based architecture} for hosting our different
 services in \textbf{AWS using docker}.}
-\cvlistitem{Despite acting as a full-stack developer, I worked more on the backend development, 
-where I used my wide experience with \textbf{Grails}, but also with other \textbf{Java} 
-based technologies such as \textbf{Spring Boot}, \textbf{Gradle}, Ratpack, or Hibernate. 
-Since \textbf{Unix} and the command line are among my oldests friends I was also involved in 
+\cvlistitem{Despite acting as a full-stack developer, I worked more on the backend development,
+where I used my wide experience with \textbf{Grails}, but also with other \textbf{Java}
+based technologies such as \textbf{Spring Boot}, \textbf{Gradle}, Ratpack, or Hibernate.
+Since \textbf{Unix} and the command line are among my oldests friends I was also involved in
+the infrastructure definition, where we mostly use \textbf{AWS} and \textbf{docker}.}
+
+
+% tado
+\cventry{Feb 13 - Dec 15}{Software engineer}{tadoº GmbH}{Munich}{}{}               % arguments 3 to 6 are optional
+\cvlistitem{I was part of the small team (4-5 people) of multi-disciplinar developers
+that take care, as a team, of all the \textbf{backend} software and \textbf{infrastructure}
+that power up tado's hardware devices and mobile apps, as well as the web-app and
+backoffice \textbf{frontend apps} and other internal tools.}
+\cvlistitem{Our duties included supporting server-device communication using binary protocols
+over \textbf{CoaP and websockets}, providing \textbf{REST APIs} for our mobile apps, front-end
+apps and partners, developing our \textbf{AngularJS web apps} for both customers and support
+agents and providing a scalable, \textbf{cloud-based architecture} for hosting our different
+services in \textbf{AWS using docker}.}
+\cvlistitem{Despite acting as a full-stack developer, I worked more on the backend development,
+where I used my wide experience with \textbf{Grails}, but also with other \textbf{Java}
+based technologies such as \textbf{Spring Boot}, \textbf{Gradle}, Ratpack, or Hibernate.
+Since \textbf{Unix} and the command line are among my oldests friends I was also involved in
 the infrastructure definition, where we mostly use \textbf{AWS} and \textbf{docker}.}
 
 % OSOCO
 \cventry{Oct 09 - Jan 13}{Software engineer}{OSOCO}{Madrid}{}{}               % arguments 3 to 6 are optional
 \cvlistitem{My main task was \textbf{software developing} (i.e architecture designing and programming),
-mostly using Groovy and Grails, but also Java/J2EE (Spring MVC, Hibernate, JSTL), web technologies 
+mostly using Groovy and Grails, but also Java/J2EE (Spring MVC, Hibernate, JSTL), web technologies
 (such as Javascript or CSS) and iOS/Objective-C.}
 \cvlistitem{I also played the \textbf{scrum master} role in some projects, being in charge of managing
 the team and the project, as well as leading the technical and architectural aspects, and mentoring
@@ -96,7 +108,7 @@ in good use my passion for Unix by helping to create and maintain both OSOCO and
 % Gesfor
 \cventry{Feb 08 - Oct 09}{Software analyst and programmer at Germinus (Web 2.0 consultancy department) }
 {Grupo Gesfor}{Madrid}{}{}               % arguments 3 to 6 are optional
-\cvlistitem{\textbf{Project leader and developer} (participating in the requirements analysis, in 
+\cvlistitem{\textbf{Project leader and developer} (participating in the requirements analysis, in
 charge of design and architecture decisions, being part of a small team under my supervision),
 using J2EE (Struts, Spring, Hibernate, JSTL, Lucene), Liferay and web technologies.}
 % LSD
@@ -126,7 +138,7 @@ architecture, etcetera).}
 Grails}, but also with other Java based languages and frameworks such as \textbf{Spring Boot}, \textbf{Hibernate}
 or \textbf{Ratpack}, using both \textbf{Java 8} and \textbf{Groovy}.
 \cvlistitem{Good knowledge of \textbf{web development} frontend technologies (HTML5, jQuery, AngularJS, etc).}
-\cvlistitem{Real experience using \textbf{Amazon AWS} (Cloudformation, EC2), \textbf{docker} and \textbf{Puppet} 
+\cvlistitem{Real experience using \textbf{Amazon AWS} (Cloudformation, EC2), \textbf{docker} and \textbf{Puppet}
 for building and manage complex cloud based architectures.}
 \cvlistitem{Wide experience with \textbf{Linux}, both as an advanced user and as a sysadmin. Skilled
 in creating and maintaining administration shell scripts.}

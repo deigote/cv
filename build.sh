@@ -2,25 +2,32 @@
 
 cd $(dirname $0)
 
-OUTPUT_DIR="$(pwd)/out/"
-if [ ! -z "$1" ] ; then
-	OUTPUT_DIR="$1"
-	mkdir -p $OUTPUT_DIR
-fi
-
 IFS=$'\n'
+SHOULD_BUILD=0
 for source in *.tex ; do
 	OUTPUT_FILE="$(basename $source '.tex').pdf"
-	OUTPUT="$OUTPUT_DIR$OUTPUT_FILE"
-	if [[ ! -f "$OUTPUT" || `git status -uno | grep "Your branch is behind"` ]] ; then 
-	        echo "We are behind, building a new release..."
-        	git pull origin master
-		docker build -t cv-updater .
-		docker run --rm -v "$(pwd)":/cv-src -v "$OUTPUT_DIR":/cv-out -i -t cv-updater bash -c \
-			"cd /cv-src && pdflatex '$source' && mv '$OUTPUT_FILE' /cv-out"
-	        curl -X PURGE http://deigote.com/cv &> /dev/null
-		curl -X PURGE "http://deigote.com/cv/Diego%20Toharia%20-%20CV%20(English).pdf" &> /dev/null
-	else 
-        	echo "Everything is up to date"
+	if [[ ! -f "$OUTPUT_FILE" || `git status -uno | grep "Your branch is behind"` ]] ; then
+		SHOULD_BUILD=1
 	fi
 done
+
+if [[ ${SHOULD_BUILD} -eq 1 ]]; then
+	echo "We are behind, building a new release..."
+	git pull origin master
+	docker build -t cv-updater .
+	docker run -it --rm -v "$(pwd)":/cv-src -w /cv-out cv-updater bash -c "\
+		cp /cv-src/*.tex . && \
+		cp /cv-src/*.png . && \
+		cp /cv-src/lib/* . && \
+		IFS=$'\n' && \
+		for source in *.tex ; do \
+			echo Building \$source && \
+			lualatex --interaction=batchmode \"\$source\" &> /dev/null && \
+			echo Built \$source ; \
+		done && \
+		mv *.pdf /cv-src"
+	curl -X PURGE http://deigote.com/cv &> /dev/null
+	curl -X PURGE "http://deigote.com/cv/Diego%20Toharia%20-%20CV%20(English).pdf" &> /dev/null
+else
+	echo "Everything is up to date"
+fi
