@@ -8,6 +8,6 @@ deploy:
   provider: releases
   api_key:
     secure: PGezJPhCT+rGJDtI6UO5jiqrA1ZLdgWXIDhzKM/h1IWpcaX6G97BQsWE11m2UrOpBl894pkTDuLG9NpSHgCuHKFBVYPJVu91dpMdpbq8AvnQB7xaTvveN7QqPVRr21I9hFELLtzBlhgs5i3W3Ry/J6L98XoBH2Rxf4tBfC21sjM=
-  file: "./Diego Toharia - CV (English).pdf"
+  file: "Diego Toharia - CV (English).pdf"
   on:
     repo: deigote/cv
