@@ -4,6 +4,12 @@ set -e
 
 cd $(dirname $0)
 
+if [ ! -z "$1" ] ; then
+	OUTPUT_DIR="$1"
+else
+	OUTPUT_DIR="$(pwd)"
+fi
+
 IFS=$'\n'
 SHOULD_BUILD=0
 for source in *.tex ; do
@@ -17,7 +23,7 @@ if [[ ${SHOULD_BUILD} -eq 1 ]]; then
 	echo "We are behind, building a new release..."
 	git pull origin master
 	docker pull deigote/cv
-	docker run -it --rm -v "$(pwd)":/cv-src -w /cv-out deigote/cv bash -c "\
+	docker run -it --rm -v "$(pwd)":/cv-src -v "$OUTPUT_DIR":/output -w /cv-out deigote/cv bash -c "\
 		set -e; \
 		cp /cv-src/*.tex . && \
 		cp /cv-src/*.png . && \
@@ -28,7 +34,7 @@ if [[ ${SHOULD_BUILD} -eq 1 ]]; then
 			lualatex --interaction=batchmode \"\$source\" &> /dev/null && \
 			echo Built \$source ; \
 		done && \
-		mv *.pdf /cv-src"
+		mv *.pdf /output"
 	curl -X PURGE http://deigote.com/cv &> /dev/null
 	curl -X PURGE "http://deigote.com/cv/Diego%20Toharia%20-%20CV%20(English).pdf" &> /dev/null
 else
