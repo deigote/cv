@@ -3,12 +3,11 @@ dist: trusty
 before_install:
 - docker pull debian:testing
 script:
-- ./build.sh
+- "./build.sh"
 deploy:
   provider: releases
   api_key:
-    secure: E1II4CWMiwB3OrX3sjAsb1ePue4flG3pXcgMulQNAQd1csRA74pGqc67hWVTNJZ9kZjZHA0U2sctSUtep9B0C5LTpOHHXBUbnNtXXZwmHCFvaKJJuy+docvs8/f+H5B0pSoT8H5ydvs3gCuC+FJ1pv//L34J9gPRmam54wsyVMM=
-  file: ./Diego Toharia - CV (English).pdf
+    secure: PGezJPhCT+rGJDtI6UO5jiqrA1ZLdgWXIDhzKM/h1IWpcaX6G97BQsWE11m2UrOpBl894pkTDuLG9NpSHgCuHKFBVYPJVu91dpMdpbq8AvnQB7xaTvveN7QqPVRr21I9hFELLtzBlhgs5i3W3Ry/J6L98XoBH2Rxf4tBfC21sjM=
+  file: "./Diego Toharia - CV (English).pdf"
   on:
     repo: deigote/cv
-    tags: true
