@@ -16,8 +16,8 @@ done
 if [[ ${SHOULD_BUILD} -eq 1 ]]; then
 	echo "We are behind, building a new release..."
 	git pull origin master
-	docker build -t cv-updater .
-	docker run -it --rm -v "$(pwd)":/cv-src -w /cv-out cv-updater bash -c "\
+	docker pull deigote/cv
+	docker run -it --rm -v "$(pwd)":/cv-src -w /cv-out deigote/cv bash -c "\
 		set -e; \
 		cp /cv-src/*.tex . && \
 		cp /cv-src/*.png . && \

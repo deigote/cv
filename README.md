@@ -1,7 +1,7 @@
 # cv
 CVs in Latex are the coolest!
 
-[![Build Status][travis-image]][travis-url] [![Build Status][download-image]][download-url]
+[![Build Status][travis-image]][travis-url] [![Build Status][dockerhub-image]][dockerhub-url] [![Build Status][download-image]][download-url]
 
 This CV wouldn't exist without the help of the following great technologies:
 - [Latex](Diego Toharia - CV (English).tex) ([more about latex](https://www.latex-project.org/))
@@ -15,4 +15,5 @@ This CV wouldn't exist without the help of the following great technologies:
 [download-url]: http://deigote.com/cv
 [download-image]: https://img.shields.io/badge/Download-CV-green.svg
 
-
+[dockerhub-url]: https://hub.docker.com/r/deigote/cv
+[dockerhub-image]: https://dockerbuildbadges.quelltext.eu/status.svg?organization=deigote&repository=cv
